@@ -10,10 +10,17 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::paginate(3);
+        $posts = Post::latest()-> with(['user', 'likes'])->paginate(3);
         return view('post.index', [
             'posts' =>$posts
         ]); 
+    }
+
+    public function show(Post $post)
+    {
+        return view('posts.show'.[
+            'post' => $post
+        ]);
     }
 
     public function store(Request $request)
@@ -27,5 +34,14 @@ class PostController extends Controller
        ]);
 
        return back();
+    }
+
+    public function destroy(Post $post)
+    {
+        $this->authorize('delete', $post);
+
+        $post->delete();
+
+        return back();
     }
 }
