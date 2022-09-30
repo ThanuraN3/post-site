@@ -199,7 +199,7 @@
                             </h3>
                             <div class="entry-meta-content">
                                 <div class="entry-author">
-                                    By <a href="#">Zohan Alex</a>
+                                    By <a href="#">Unikey Global</a>
                                 </div>
                                 <div class="entry-date">
                                     On <span>Jan23 - 20</span>

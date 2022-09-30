@@ -7,17 +7,17 @@
     <title>Post-site</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
-<body class="bg-gray-200">
-    <nav class="p-6 bg-white flex justify-between mb-6">
-        <ul class="flex item-center">
+<body class="bg-blue-200 text-light">
+    <nav class="p-6 bg-blue-800 flex justify-between" id="app-text">
+        <ul class="flex item-center text-light">
             <li>
-                <a href="{{ route('home')}}" class="p-3">Home</a>
+                <a href="{{ route('home')}}" class="p-3 text-light">Home</a>
             </li>
             <li>
-                <a href="{{ route('dashboard')}}" class="p-3">dashboard</a>
+                <a href="{{ route('dashboard')}}" class="p-3  text-light">dashboard</a>
             </li>
             <li>
-                <a href="{{ route('posts')}}" class="p-3">Post</a>
+                <a href="{{ route('posts')}}" class="p-3  text-light">Post</a>
             </li>
         </ul>
 
@@ -25,22 +25,22 @@
 
             @auth
                 <li>
-                    <a href="" class="p-3">{{ auth()->user()->name }}</a>
+                    <a href="" class="p-3  text-light">{{ auth()->user()->name }}</a>
                 </li>
                 <li>
                     <form action="{{ route('logout') }}" method="POST" class="p-3 inline">
                         @csrf
-                        <button type="submit">Logout</button>
+                        <button type="submit" class=" text-light">Logout</button>
                     </form>     
                 </li>
             @endauth
             
             @guest
                 <li>
-                    <a href="{{ route('login')}}" class="p-3">Login</a>
+                    <a href="{{ route('login')}}" class="p-3  text-light">Login</a>
                 </li>
                 <li>
-                    <a href="{{ route('register')}}" class="p-3">Register</a>
+                    <a href="{{ route('register')}}" class="p-3  text-light">Register</a>
                 </li>
             @endguest
             

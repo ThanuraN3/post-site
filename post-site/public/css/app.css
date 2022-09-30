@@ -130,6 +130,9 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+#app-text{
+  color: white !important;
+}
 
 sub {
   bottom: -0.25em;
