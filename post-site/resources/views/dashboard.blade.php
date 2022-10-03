@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @include('body.master')
+{{-- @include('components.post') --}}
+
 
 @section('content')
 <div id="layoutSidenav">
@@ -10,16 +12,19 @@
                     <div class="sb-sidenav-menu-heading">UNIKEY GLOBAL ADMIN PANAL</div>
                     <a class="nav-link" href="index.html">
                         <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        Dashboard
+                        Resent Blog posts
                     </a>
-                    <div class="sb-sidenav-menu-heading">Addons</div>
-                    <a class="nav-link" href="charts.html">
-                        <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                        Charts
+                    <a class="nav-link" href="index.html">
+                        <div class="sb-nav-link-icon"><i class="bi bi-folder-plus"></i></div>
+                        Add New posts
                     </a>
-                    <a class="nav-link" href="tables.html">
-                        <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                        Tables
+                    <a class="nav-link" href="index.html">
+                        <div class="sb-nav-link-icon"><i class="bi bi-trash-fill"></i></div>
+                        Deleted posts
+                    </a>
+                    <a class="nav-link" href="index.html">
+                        <div class="sb-nav-link-icon"><i class="bi bi-person-lines-fill"></i></div>
+                        Bloggers List
                     </a>
                 </div>
             </div>
@@ -61,9 +66,9 @@
                     </div>
                     <div class="col-xl-3 col-md-6">
                         <div class="card bg-success text-white mb-4">
-                            <div class="card-body">Gallary</div>
+                            <div class="card-body">Unikey Web</div>
                             <div class="card-footer d-flex align-items-center justify-content-between">
-                                <a class="small text-white stretched-link" href="#">View Details</a>
+                                <a class="small text-white stretched-link" href="http://unikey.xessdubai.com/">View Details</a>
                                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                             </div>
                         </div>
@@ -78,33 +83,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="card mb-4">
+                <div class="card">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        Bloggers List
+                        <h1>Bloggers List</h1>
                     </div>
+                    
                     <div class="card-body">
                         <table id="datatablesSimple">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
+                                    <th>Blogger Name</th>
+                                    <th>Blog Post</th>
+                                    <th>Content</th>
+                                    <th>image</th>
+                                    <th>Post date</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Position</th>
-                                    <th>Office</th>
-                                    <th>Age</th>
-                                    <th>Start date</th>
-                                    <th>Salary</th>
-                                </tr>
-                            </tfoot>
                             <tbody>
                                 <tr>
                                     <td>Tiger Nixon</td>
